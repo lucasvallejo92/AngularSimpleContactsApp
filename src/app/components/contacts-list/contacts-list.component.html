@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-12 header">
+        <h1>{{ resources.title }}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 divisor">
+        <h2>{{ resources.sub_titles.favourite }}</h2>
+    </div>
+</div>
+<span *ngFor="let contact of _contactsService.contacts; let i = index">
+    <div *ngIf="contact.isFavorite" class="row contact">
+        <div class="col-12 detail" [ngStyle]="{'background-image': 'url('+ contact.largeImageURL +'), url(' + defaultProfileImg + ')'}" (click)="onClick(contact)">
+            <span class="name fav">{{ contact.name }}</span><br>
+            <span class="desc">{{ contact.companyName }}</span>
+        </div>
+    </div>
+    <div class="col-12">
+        <hr *ngIf="contact.isFavorite && _contactsService.favLastIndex !== i">
+    </div>
+</span>
+<div class="row">
+    <div class="col-12 divisor">
+        <h2>{{ resources.sub_titles.other }}</h2>
+    </div>
+</div>
+<span *ngFor="let contact of _contactsService.contacts; let i = index">
+    <div *ngIf="!contact.isFavorite" class="row contact">
+        <div class="col-12 detail" [ngStyle]="{'background-image': 'url('+ contact.smallImageURL +'), url(' + defaultProfileImg + ')'}" (click)="onClick(contact)">
+            <span class="name">{{ contact.name }}</span><br>
+            <span class="desc">{{ contact.companyName }}</span>
+        </div>
+    </div>
+    <div class="col-12">
+        <hr *ngIf="!contact.isFavorite && _contactsService.otherLastIndex !== i">
+    </div>
+</span>

@@ -1,0 +1,67 @@
+.header {
+    background-color: #f9f9f9;
+    text-align: center;
+    h1 {
+        font-weight: 400;
+        margin-top: 1.9rem;
+        font-size: 1.25rem;
+    }
+}
+
+.divisor {
+    background-color: #f4f4f4;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    h2 {
+        padding-left: 1rem;
+        font-weight: 400;
+        font-size: 0.85rem;
+        margin-bottom: 0px;
+    }
+}
+
+.contact {
+    height: 6.25rem;
+    padding: 10px 20px 10px 20px;
+    img {
+        height: 4rem;
+        width: 4rem;
+    }
+    .detail {
+        background-image: url('../../../assets/icons/user-large/user-large.png');
+        background-position: left 1rem center;
+        background-repeat: no-repeat;
+        background-size: 3.75rem;
+        padding-left: 6rem;
+        text-align: left;
+        padding-top: 1.1rem;
+        .name {
+            font-weight: 500;
+            color: #141414;
+            margin-left: 2rem;
+            overflow-x: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .desc {
+            font-weight: 200;
+            color: #848484;
+            margin-left: 2rem;
+            display: block;
+            min-width: 4rem;
+            overflow-x: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .fav:before {
+            content: '⭐';
+            margin-left: -1.85rem;
+            padding-right: 0.5rem;
+        }
+    }
+}
+
+
+hr {
+    margin: 0;
+}

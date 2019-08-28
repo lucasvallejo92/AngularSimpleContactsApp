@@ -1,0 +1,7 @@
+{
+    "/technical-challenge/*": {
+        "target": "https://s3.amazonaws.com",
+        "secure": false,
+        "changeOrigin": true
+    }
+}

@@ -1,0 +1,92 @@
+<div class="row header">
+    <div class="col-6" (click)="back()">
+        <h1><a><fa-icon [icon]="faChevronLeft"></fa-icon></a> {{ resources.title }}</h1>
+    </div>
+    <div class="col-6">
+        <i class="ico" (click)="_contactsService.setUnsetFavourite(_contactsService.contact?.id)" [ngClass]="{'fav-true': _contactsService.contact?.isFavorite, 'fav-false': !_contactsService.contact?.isFavorite }"></i>
+    </div>
+</div>
+<div class="container">
+    <div class="row main-detail">
+        <div class="col-12">
+            <img [src]="_contactsService.contact?.largeImageURL" [default]="defaultProfileImg" alt="_contactsService.contact?.name">
+        </div>
+        <div class="col-12">
+            <h1>{{ _contactsService.contact?.name }}</h1>
+        </div>
+        <div class="col-12">
+            <h4>{{ _contactsService.contact?.companyName }}</h4>
+        </div>
+        <div class="col-12"><hr></div>
+    </div>
+    <div class="row detail-item" *ngIf="_contactsService.contact?.phone?.home">
+        <div class="col-12 title">
+            {{ resources.details.phone }}
+        </div>
+        <div class="col-6 content">
+            <span>{{ _contactsService.contact.phone.home }}</span>
+        </div>
+        <div class="col-6 phone-type text-right">
+            <span>{{ resources.phone_types.home }}</span>
+        </div>
+        <div class="col-12"><hr></div>
+    </div>
+    <div class="row detail-item" *ngIf="_contactsService.contact?.phone?.mobile">
+        <div class="col-12 title">
+            {{ resources.details.phone }}
+        </div>
+        <div class="col-6 content">
+            <span>{{ _contactsService.contact.phone.mobile }}</span>
+        </div>
+        <div class="col-6 phone-type text-right">
+            <span>{{ resources.phone_types.mobile }}</span>
+        </div>
+        <div class="col-12"><hr></div>
+    </div>
+    <div class="row detail-item" *ngIf="_contactsService.contact?.phone?.work">
+        <div class="col-12 title">
+            {{ resources.details.phone }}
+        </div>
+        <div class="col-6 content">
+            <span>{{ _contactsService.contact.phone.work }}</span>
+        </div>
+        <div class="col-6 phone-type text-right">
+            <span>{{ resources.phone_types.work }}</span>
+        </div>
+        <div class="col-12"><hr></div>
+    </div>
+    <div class="row detail-item" *ngIf="_contactsService.contact?.address">
+        <div class="col-12 title">
+            {{ resources.details.address }}
+        </div>
+        <div class="col-12 content">
+            <span>{{ _contactsService.contact.address.street }}</span>
+        </div>
+        <div class="col-12 content">
+            <span>
+                {{ _contactsService.contact.address.city }}
+                {{ _contactsService.contact.address.zipCode ? ', ' + _contactsService.contact.address.zipCode : '' }}
+                {{ _contactsService.contact.address.country ? ', ' + _contactsService.contact.address.country : '' }}
+            </span>
+        </div>
+        <div class="col-12"><hr></div>
+    </div>
+    <div class="row detail-item" *ngIf="_contactsService.contact?.birthdate">
+        <div class="col-12 title">
+            {{ resources.details.birthdate }}
+        </div>
+        <div class="col-12 content">
+            <span>{{ _contactsService.contact.birthdate }}</span>
+        </div>
+        <div class="col-12"><hr></div>
+    </div>
+    <div class="row detail-item" *ngIf="_contactsService.contact?.emailAddress">
+        <div class="col-12 title">
+            {{ resources.details.email }}
+        </div>
+        <div class="col-12 content">
+            <span>{{ _contactsService.contact.emailAddress }}</span>
+        </div>
+        <div class="col-12"><hr></div>
+    </div>
+</div>

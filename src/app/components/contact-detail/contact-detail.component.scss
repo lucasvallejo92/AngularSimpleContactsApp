@@ -1,0 +1,68 @@
+.header {
+    background-color: #f9f9f9;
+    color: #4187d8;
+    h1 {
+        font-weight: 400;
+        margin-top: 1.9rem;
+        font-size: 20px;
+        font-size: 1.25rem;
+        margin-left: 1rem;
+    }
+}
+
+.main-detail {
+    text-align: center;
+    img {
+        height: 9.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    h1 {
+        font-size: 1.75rem;
+        color: #141414;
+        margin-bottom: 0.2rem;
+        font-weight: 500;
+    }
+    h4 {
+        font-size: 1.125rem;
+        color: #848484;
+        font-weight: 400;
+    }
+}
+
+.detail-item {
+    .title {
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        color: #848484;
+    }
+    .content {
+        color: #141414;
+    }
+    .phone-type {
+        font-size: 0.9rem;
+        color: #848484;
+    }
+    .divisor {
+        padding-top: 0.4rem;
+    }
+}
+
+
+
+.ico {
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-position: right;
+    padding-right: 4rem;
+}
+
+.fav-true {
+    background-image: url('../../../assets/icons/favourite-star-true/favourite-true.png'); 
+}
+.fav-false {
+    background-image: url('../../../assets/icons/favourite-star-false/favourite-false.png');
+}
